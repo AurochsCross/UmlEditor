@@ -58,9 +58,10 @@ struct ContentView: View {
             
             CanvasSettingsView(
                 zoom: $viewModel.zoomLevel,
+                searchText: $viewModel.searchText,
                 onArrange: { self.viewModel.arrangeNodes() },
                 onSave: { self.viewModel.saveScheme() },
-                nodeGroups: self.viewModel.nodeGroups,
+                nodeGroups: self.viewModel.visibleNodeGroups,
                 selectedGroupId: self.$viewModel.selectedGroupId)
         }
         .frame(minWidth: 300, minHeight: 300, alignment: .topLeading)

@@ -15,10 +15,12 @@ class ContentViewModel: ObservableObject {
     @Published var canvasLocation = CGPoint()
     @Published var openFile: PumlFile?
     @Published var zoomLevel: CGFloat = 1
+    @Published var searchText: String = ""
     @Published var currentNode: Node?
     
     @Published var visibleNodes: [Node] = []
     @Published var nodes: [Node] = []
+    @Published var visibleNodeGroups: [NodeGroup] = []
     @Published var nodeGroups: [NodeGroup] = []
     @Published var connections: [Connection] = []
     
@@ -47,6 +49,21 @@ class ContentViewModel: ObservableObject {
                 self.canvasLocation = .zero
             }
             .store(in: &cancellables)
+        
+        $searchText
+            .map { text -> [NodeGroup] in
+                if text.isEmpty {
+                    return self.nodeGroups
+                }
+                
+                return self.nodeGroups.filter { group in
+                    group.name.contains(text)
+                }
+            }
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.visibleNodeGroups, on: self)
+            .store(in: &cancellables)
+        
     }
     
     func setLocation(ofNode node: Node, x: CGFloat, y: CGFloat) {
@@ -102,6 +119,7 @@ class ContentViewModel: ObservableObject {
         DispatchQueue.main.async {
             self.nodes = puml.nodes
             self.nodeGroups = groups
+            self.visibleNodeGroups = groups
             self.zoomLevel = CGFloat(puml.zoomLevel)
             if url.pathExtension == "puml" {
                 self.openFile = PumlFile(location: url, name: url.lastPathComponent)
@@ -110,11 +128,6 @@ class ContentViewModel: ObservableObject {
             }
         }
     }
-    
-//    func setupConnections() {
-//        let positioner = NodePositioner(nodes: visibleNodes)
-//        connections = positioner.createConnections()
-//    }
     
     func arrangeNodes() {
         let positioner = NodePositioner(nodes: visibleNodes)

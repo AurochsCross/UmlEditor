@@ -48,6 +48,9 @@ class NodeExtractor {
                     
                     })?.name
                 
+                fixedElement.superClassName = uml.first { $0.id == fixedElement.id }?.name
+                fixedElement.protocolNames = uml.filter { fixedElement.protocols?.contains($0.id) ?? false }.compactMap { $0.name }
+                
                 return fixedElement
             }
         

@@ -21,6 +21,24 @@ struct NodeView: View {
             }
                 .font(.system(.title))
             
+            if (node.content.protocolNames?.count ?? 0) > 0 {
+                Divider()
+                    .frame(width: 200)
+                
+                HStack {
+                    Text("Protocols")
+                        .bold()
+                    Button(action: { self.copyProperties() }) {
+                        Text("Copy")
+                    }
+                }
+                VStack(alignment: .leading) {
+                    ForEach(node.content.protocolNames!, id: \.self) { property in
+                        Text("\(property)")
+                    }
+                }
+            }
+            
             if (node.content.properties?.count ?? 0) > 0 {
                 Divider()
                     .frame(width: 200)
@@ -76,6 +94,14 @@ struct NodeView: View {
                     }
             }
         )
+    }
+    
+    func copyProtocols() {
+        let properties = node.content.properties?.reduce(into: "") { result, property in
+            result += "\(property.accessLevelSymbol) \(property.name)\n"
+        }
+        
+        writeToClipBoard(properties)
     }
     
     func copyProperties() {

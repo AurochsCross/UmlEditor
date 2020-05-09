@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CanvasSettingsView: View {
     @Binding var zoom: CGFloat
+    @Binding var searchText: String
     var onArrange: () -> () = { }
     var onSave: () -> () = { }
     var onNodeGroupSelected: (NodeGroup) -> () = { _ in }
@@ -21,17 +22,21 @@ struct CanvasSettingsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             
-            Text("Canvas")
-                .font(.system(.title))
-                .padding(.horizontal)
-                .padding(.bottom)
-            
             Text("Groups")
                 .padding(.horizontal)
-            Picker(selection: $selectedGroupId, label: Text("Group")) {
+            
+            HStack {
+                TextField("Filter", text: $searchText)
+            }
+            
+            List {
                 ForEach(nodeGroups) { group in
                     Text("\(group.name)").tag(group.id)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .onTapGesture { self.selectedGroupId = group.id }
+                        .listRowBackground(group.id == self.selectedGroupId ? Color.blue : Color.clear)
                 }
+            
             }
             
             Text("Zoom")
@@ -64,13 +69,14 @@ struct CanvasSettingsView: View {
             Spacer()
         }
         .padding(.vertical)
-        .frame(maxWidth: 200)
+        .padding(.horizontal)
+        .frame(maxWidth: 400)
     }
 }
 
 struct CanvasSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        CanvasSettingsView(zoom: .constant(0.2), nodeGroups: [
+        CanvasSettingsView(zoom: .constant(0.2), searchText: .constant(""), nodeGroups: [
             NodeGroup(name: "Lol", nodes: []),
             NodeGroup(name: "Big one", nodes: [])
         ],

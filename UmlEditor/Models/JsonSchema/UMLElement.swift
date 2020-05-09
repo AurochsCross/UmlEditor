@@ -13,6 +13,9 @@ struct UMLElement: Codable {
     let superClass: Int?
     let cases: [Case]?
     let containedEntities, protocols, extensions: [Int]?
+    
+    var superClassName: String?
+    var protocolNames: [String]?
 }
 
 // MARK: - Case
