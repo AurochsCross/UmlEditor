@@ -12,6 +12,11 @@ struct CanvasSettingsView: View {
     @Binding var zoom: CGFloat
     var onArrange: () -> () = { }
     var onSave: () -> () = { }
+    var onNodeGroupSelected: (NodeGroup) -> () = { _ in }
+    
+    var nodeGroups: [NodeGroup]
+    
+    @Binding var selectedGroupId: UUID
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -23,7 +28,11 @@ struct CanvasSettingsView: View {
             
             Text("Groups")
                 .padding(.horizontal)
-            
+            Picker(selection: $selectedGroupId, label: Text("Group")) {
+                ForEach(nodeGroups) { group in
+                    Text("\(group.name)").tag(group.id)
+                }
+            }
             
             Text("Zoom")
                 .padding(.horizontal)
@@ -61,7 +70,11 @@ struct CanvasSettingsView: View {
 
 struct CanvasSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        CanvasSettingsView(zoom: .constant(0.2))
+        CanvasSettingsView(zoom: .constant(0.2), nodeGroups: [
+            NodeGroup(name: "Lol", nodes: []),
+            NodeGroup(name: "Big one", nodes: [])
+        ],
+           selectedGroupId: .constant(UUID()))
             .previewLayout(.fixed(width: 200, height: 400))
     }
 }

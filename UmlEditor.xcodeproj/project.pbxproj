@@ -28,6 +28,7 @@
 		A763430E2458D9AD00A09F8D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763430D2458D9AD00A09F8D /* Node.swift */; };
 		A76343112458DA1000A09F8D /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76343102458DA1000A09F8D /* NodeView.swift */; };
 		A76343142458DD8000A09F8D /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76343132458DD8000A09F8D /* ContentViewModel.swift */; };
+		A7D46312245A01C900D68F29 /* NodeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D46311245A01C900D68F29 /* NodeGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		A763430D2458D9AD00A09F8D /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		A76343102458DA1000A09F8D /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 		A76343132458DD8000A09F8D /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		A7D46311245A01C900D68F29 /* NodeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				A709AF0124598A9E00B898DF /* Connection.swift */,
 				A709AF082459A70700B898DF /* PumlFile.swift */,
 				A709AF0A2459A8DC00B898DF /* PumlData.swift */,
+				A7D46311245A01C900D68F29 /* NodeGroup.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				A709AF0B2459A8DC00B898DF /* PumlData.swift in Sources */,
 				A710845A245971C10098EC3D /* CanvasSettingsView.swift in Sources */,
 				A710845824596E020098EC3D /* UMLElement.swift in Sources */,
+				A7D46312245A01C900D68F29 /* NodeGroup.swift in Sources */,
 				A709AF072459A06600B898DF /* FileManager.swift in Sources */,
 				A709AF0524598F9100B898DF /* MockData.swift in Sources */,
 				A709AF112459C5A000B898DF /* NodeGrouper.swift in Sources */,

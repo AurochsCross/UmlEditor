@@ -8,19 +8,46 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 class ContentViewModel: ObservableObject {
 
+    @Published var canvasLocation = CGPoint()
     @Published var openFile: PumlFile?
     @Published var zoomLevel: CGFloat = 1
     @Published var currentNode: Node?
+    
+    @Published var visibleNodes: [Node] = []
     @Published var nodes: [Node] = []
-    @Published var nodeGroups: [[Node]] = []
+    @Published var nodeGroups: [NodeGroup] = []
     @Published var connections: [Connection] = []
+    
+    @Published var selectedGroupId: UUID = UUID()
     
     @Published var viewUpdater = false
     
     private var dragOffset: CGPoint?
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    func setup() {
+        $selectedGroupId
+            .map { id in
+                return self.nodeGroups.first(where: { id == $0.id })?.nodes ?? self.nodes
+            }
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.visibleNodes, on: self)
+            .store(in: &cancellables)
+        
+        $visibleNodes
+            .receive(on: DispatchQueue.main)
+            .sink { values in
+                let positioner = NodePositioner(nodes: self.visibleNodes)
+                self.connections = positioner.createConnections()
+                self.canvasLocation = .zero
+            }
+            .store(in: &cancellables)
+    }
     
     func setLocation(ofNode node: Node, x: CGFloat, y: CGFloat) {
         
@@ -38,6 +65,15 @@ class ContentViewModel: ObservableObject {
         connections = connections.reversed()
         
         viewUpdater.toggle()
+    }
+    
+    func setCanvasLocation(_ location: CGPoint) {
+        if dragOffset == nil {
+            dragOffset = CGPoint(x: canvasLocation.x - location.x, y: canvasLocation.y - location.y)
+        }
+        
+        canvasLocation.x = location.x + dragOffset!.x
+        canvasLocation.y = location.y + dragOffset!.y
     }
     
     func finishedDragging() {
@@ -61,13 +97,12 @@ class ContentViewModel: ObservableObject {
     func itemDropped(url: URL) {
         let extractor = NodeExtractor(url: url)
         let puml = extractor.extract()
-        let groups = NodeGrouper(nodes: puml.nodes).group()
+        let groups = NodeGrouper(nodes: puml.nodes).group().sorted(by: { $0.name < $1.name })
         
         DispatchQueue.main.async {
             self.nodes = puml.nodes
             self.nodeGroups = groups
             self.zoomLevel = CGFloat(puml.zoomLevel)
-            self.setupConnections()
             if url.pathExtension == "puml" {
                 self.openFile = PumlFile(location: url, name: url.lastPathComponent)
             } else {
@@ -76,19 +111,28 @@ class ContentViewModel: ObservableObject {
         }
     }
     
-    func setupConnections() {
-        let positioner = NodePositioner(nodes: nodes)
-        connections = positioner.createConnections()
-    }
+//    func setupConnections() {
+//        let positioner = NodePositioner(nodes: visibleNodes)
+//        connections = positioner.createConnections()
+//    }
     
     func arrangeNodes() {
-        let positioner = NodePositioner(nodes: nodes)
-        
+        let positioner = NodePositioner(nodes: visibleNodes)
         positioner.position()
         
         DispatchQueue.main.async {
             self.currentNode = nil
         }
+    }
+    
+    func isNodeVisible(_ node: Node, geometry: GeometryProxy) -> Bool {
+        let visibleArea = CGRect(
+            x: -canvasLocation.x - geometry.size.width / 2.0 - node.rendering.width / 2,
+            y: -canvasLocation.y - geometry.size.height / 2.0 - node.rendering.height / 2,
+            width: geometry.size.width + node.rendering.width,
+            height: geometry.size.height + node.rendering.height)
+        
+        return visibleArea.contains(CGRect(x: node.rendering.x - node.rendering.width / 2, y: node.rendering.y - node.rendering.height / 2, width: node.rendering.width, height: node.rendering.height))
     }
 }
 

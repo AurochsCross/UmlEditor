@@ -11,45 +11,61 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var viewModel: ContentViewModel
     
+    private let canvasSize: CGFloat = 1000000
+    
     var body: some View {
         HStack {
-            ScrollView([.horizontal, .vertical]) {
-                ZStack {
-                    Rectangle()
-                        .fill(Color.white)
-                        .border(Color.black, width: 1.0)
+            ZStack {
+                GeometryReader { geometry in
+                    ZStack {
+                        Rectangle()
+                            .fill(Color.white)
                         
-                    ForEach(viewModel.connections, id: \.randomId) { connection in
-                        ConnectionView(connection: connection, offset: CGPoint(x: 5000, y: 5000))
-                    }
-                    
-                    ForEach(viewModel.nodes) { node in
-                        NodeView(node: node)
-                            .offset(x: node.rendering.x, y: node.rendering.y)
-                            .onTapGesture {
-                                self.viewModel.selectNode(node)
-                            }
-                            .gesture(DragGesture()
-                                .onChanged { value in
-                                    self.viewModel.setLocation(ofNode: node, x: value.location.x, y: value.location.y)
+                        ForEach(self.viewModel.connections, id: \.randomId) { connection in
+                            ConnectionView(connection: connection, offset: CGPoint(x: self.canvasSize / 2, y: self.canvasSize / 2))
+                        }
+                        
+                        ForEach(self.viewModel.visibleNodes) { node in
+                            NodeView(node: node)
+                                .offset(x: node.rendering.x, y: node.rendering.y)
+                                .onTapGesture {
+                                    self.viewModel.selectNode(node)
                                 }
-                                .onEnded { _ in
-                                    self.viewModel.finishedDragging()
-                                })
+                                .gesture(DragGesture()
+                                    .onChanged { value in
+                                        self.viewModel.setLocation(ofNode: node, x: value.location.x, y: value.location.y)
+                                    }
+                                    .onEnded { _ in
+                                        self.viewModel.finishedDragging()
+                                    })
+                        }
                     }
+                    .offset(x: self.viewModel.canvasLocation.x, y: self.viewModel.canvasLocation.y)
+                    .frame(width: self.canvasSize, height: self.canvasSize, alignment: .center)
+                    .scaleEffect(self.viewModel.zoomLevel)
+                    .gesture(DragGesture()
+                        .onChanged { value in
+                            self.viewModel.setCanvasLocation(value.location)
+                        }
+                        .onEnded { _ in
+                            self.viewModel.finishedDragging()
+                        })
                 }
-                .frame(width: 10000, height: 10000, alignment: .center)
-                .scaleEffect(viewModel.zoomLevel)
-                .background(Color(white: 1))
             }
+            .clipped()
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .background(Color(white: 1))
             
             CanvasSettingsView(
                 zoom: $viewModel.zoomLevel,
                 onArrange: { self.viewModel.arrangeNodes() },
-                onSave: { self.viewModel.saveScheme() })
+                onSave: { self.viewModel.saveScheme() },
+                nodeGroups: self.viewModel.nodeGroups,
+                selectedGroupId: self.$viewModel.selectedGroupId)
         }
         .frame(minWidth: 300, minHeight: 300, alignment: .topLeading)
         .onDrop(of: [(kUTTypeFileURL as String)], delegate: viewModel)
+        .onAppear { self.viewModel.setup() }
     }
 }
 

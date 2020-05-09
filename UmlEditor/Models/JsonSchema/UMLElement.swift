@@ -55,7 +55,7 @@ extension Method: Identifiable {
     var id: Int { name.hashValue }
     var accessLevelSymbol: String {
         switch accessLevel {
-        case .accessLevelInternal: return "-"
+        case .accessLevelInternal: return "+"
         case .accessLevelPrivate: return "-"
         case .accessLevelPublic: return "+"
         case .accessLevelOpen: return "+"

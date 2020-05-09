@@ -6,10 +6,12 @@
 //  Copyright © 2020 AurochsDigital. All rights reserved.
 //
 
+import Foundation
 import SwiftUI
 
 struct NodeView: View {
     var node: Node
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 0) {
@@ -23,8 +25,13 @@ struct NodeView: View {
                 Divider()
                     .frame(width: 200)
                 
-                Text("Properties")
-                    .bold()
+                HStack {
+                    Text("Properties")
+                        .bold()
+                    Button(action: { self.copyProperties() }) {
+                        Text("Copy")
+                    }
+                }
                 VStack(alignment: .leading) {
                     ForEach(node.content.properties!) { property in
                         Text("\(property.accessLevelSymbol) \(property.name)")
@@ -37,8 +44,13 @@ struct NodeView: View {
                     .frame(width: 200)
                 
                 
-                Text("Methods")
-                    .bold()
+                HStack {
+                    Text("Methods")
+                        .bold()
+                    Button(action: { self.copyMethods() }) {
+                        Text("Copy")
+                    }
+                }
                 VStack(alignment: .leading) {
                     ForEach(node.content.methods!) { property in
                         Text("\(property.accessLevelSymbol) \(property.name)")
@@ -64,6 +76,30 @@ struct NodeView: View {
                     }
             }
         )
+    }
+    
+    func copyProperties() {
+        let properties = node.content.properties?.reduce(into: "") { result, property in
+            result += "\(property.accessLevelSymbol) \(property.name)\n"
+        }
+        
+        writeToClipBoard(properties)
+    }
+    
+    func copyMethods() {
+        let methods = node.content.methods?.reduce(into: "") { result, method in
+            result += "\(method.accessLevelSymbol) \(method.name)\n"
+        }
+        
+        writeToClipBoard(methods)
+    }
+    
+    private func writeToClipBoard(_ value: String?) {
+        guard let value = value else { return }
+        
+        let pasteboard = NSPasteboard.general
+        pasteboard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil)
+        pasteboard.setString(value, forType: NSPasteboard.PasteboardType.string)
     }
 }
 

@@ -23,16 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C558CEDD-DE3F-44EB-A30B-199A8075993F"
+            uuid = "52DDB9F3-736B-4CE8-9892-B937DDA076B1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UmlEditor/Models/Connection.swift"
+            filePath = "UmlEditor/Utilities/NodeGrouper.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "pointOnBounds()"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "group()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

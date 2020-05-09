@@ -10,8 +10,8 @@ import Foundation
 
 class NodePositioner {
     private enum Config {
-        static let verticalOffset: CGFloat = -900
-        static let horizontalOffset: CGFloat = -900
+        static let verticalOffset: CGFloat = -200
+        static let horizontalOffset: CGFloat = -200
         static let maxHorizontalSpace: CGFloat = 2000
         static let padding: CGFloat = 20
     }
@@ -22,11 +22,12 @@ class NodePositioner {
         self.nodes = nodes
     }
     
-    func position() {
+    func position(offset: CGPoint = .zero) -> CGRect {
         var currentLineOccupiedSpace: CGFloat = 0
-        
         var currentLineHeightPosition = 0
         var nextLineHeightPosition = 0
+        
+        var maxLineOccupiedSpace: CGFloat = 0
         
         nodes.forEach { node in
             
@@ -45,14 +46,19 @@ class NodePositioner {
                 currentLineOccupiedSpace = 0
             }
             
-            node.rendering.x = currentLineOccupiedSpace + node.rendering.width / 2 + Config.horizontalOffset
-            node.rendering.y = CGFloat(currentLineHeightPosition) + node.rendering.height / 2 + Config.verticalOffset
+            node.rendering.x = currentLineOccupiedSpace + node.rendering.width / 2 + Config.horizontalOffset + offset.x
+            node.rendering.y = CGFloat(currentLineHeightPosition) + node.rendering.height / 2 + Config.verticalOffset + offset.y
             currentLineOccupiedSpace += node.rendering.width
             
+            maxLineOccupiedSpace = currentLineOccupiedSpace > maxLineOccupiedSpace ? currentLineOccupiedSpace : maxLineOccupiedSpace
+            
         }
+        
+        return CGRect(x: offset.x, y: offset.y, width: maxLineOccupiedSpace, height: CGFloat(nextLineHeightPosition))
     }
     
     func createConnections() -> [Connection] {
+        return []
         let childNodes = nodes.filter({ $0.content.superClass != nil})
         
         return childNodes.map { child -> Connection in
