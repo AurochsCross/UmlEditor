@@ -48,18 +48,9 @@ struct CanvasSettingsView: View {
                     .frame(width: 50)
             }
             .padding(.horizontal)
-            Divider()
-            Button(action: { self.onArrange() }) {
-                Text("Arrange")
-            }
-            .frame(maxWidth: .infinity)
-            
             
             Divider()
             HStack(alignment: .center) {
-                Button(action: {  }) {
-                    Text("Load")
-                }
                 Button(action: { self.onSave() }) {
                     Text("Save")
                 }
