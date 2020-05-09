@@ -52,7 +52,7 @@ struct NodeView: View {
                 }
                 VStack(alignment: .leading) {
                     ForEach(node.content.properties!) { property in
-                        Text("\(property.accessLevelSymbol) \(property.name)")
+                        Text("\(property.accessLevelSymbol) \(property.nameWithoutIdentifier)")
                     }
                 }
             }
@@ -101,12 +101,12 @@ struct NodeView: View {
             result += "\(property.accessLevelSymbol) \(property.name)\n"
         }
         
-        writeToClipBoard(properties)
+        //writeToClipBoard(properties)
     }
     
     func copyProperties() {
         let properties = node.content.properties?.reduce(into: "") { result, property in
-            result += "\(property.accessLevelSymbol) \(property.name)\n"
+            result += "\(property.accessLevelSymbol) \(property.nameWithoutIdentifier)\n"
         }
         
         writeToClipBoard(properties)

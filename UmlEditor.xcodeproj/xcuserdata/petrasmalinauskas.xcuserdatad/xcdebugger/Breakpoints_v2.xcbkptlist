@@ -23,47 +23,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C3E748CF-7843-42FF-82C8-6BD598272256"
-            shouldBeEnabled = "Yes"
+            uuid = "C0D3019F-EF1C-4BAD-93F8-D1F212A4C4BC"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UmlEditor/Views/NodeView.swift"
+            filePath = "UmlEditor/Utilities/NodeExtractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "extract()"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C3E748CF-7843-42FF-82C8-6BD598272256 - 474639d812b4f179"
+                  uuid = "C0D3019F-EF1C-4BAD-93F8-D1F212A4C4BC - e167585ff47c397a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #3 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI.Text&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI.Text&gt;&gt;)&gt;&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;UmlEditor.Method&gt;, Swift.Int, SwiftUI.Text&gt;&gt;)&gt;&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;UmlEditor.Method&gt;, Swift.Int, SwiftUI.Text&gt;&gt;)&gt;&gt;)&gt; in UmlEditor.NodeView.body.getter : some"
+                  symbolName = "closure #2 (UmlEditor.UMLElement) -&gt; Swift.Bool in closure #1 (UmlEditor.UMLElement) -&gt; UmlEditor.UMLElement in UmlEditor.NodeExtractor.extract() -&gt; UmlEditor.PumlData"
                   moduleName = "UmlEditor"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/petrasmalinauskas/Documents/OpenSource/UmlEditor/UmlEditor/UmlEditor/Views/NodeView.swift"
+                  urlString = "file:///Users/petrasmalinauskas/Documents/OpenSource/UmlEditor/UmlEditor/UmlEditor/Utilities/NodeExtractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "63">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "395">
                </Location>
                <Location
-                  uuid = "C3E748CF-7843-42FF-82C8-6BD598272256 - 309bf1c8bbf6a347"
+                  uuid = "C0D3019F-EF1C-4BAD-93F8-D1F212A4C4BC - c033b4a0b498e13e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; SwiftUI.Text in closure #3 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI.Text&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI.Text&gt;&gt;)&gt;&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;UmlEditor.Method&gt;, Swift.Int, SwiftUI.Text&gt;&gt;)&gt;&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;UmlEditor.Method&gt;, Swift.Int, SwiftUI.Text&gt;&gt;)&gt;&gt;)&gt; in UmlEditor.NodeView.body.getter : some"
+                  symbolName = "closure #1 (Swift.Int) -&gt; Swift.Bool in closure #2 (UmlEditor.UMLElement) -&gt; Swift.Bool in closure #1 (UmlEditor.UMLElement) -&gt; UmlEditor.UMLElement in UmlEditor.NodeExtractor.extract() -&gt; UmlEditor.PumlData"
                   moduleName = "UmlEditor"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/petrasmalinauskas/Documents/OpenSource/UmlEditor/UmlEditor/UmlEditor/Views/NodeView.swift"
+                  urlString = "file:///Users/petrasmalinauskas/Documents/OpenSource/UmlEditor/UmlEditor/UmlEditor/Utilities/NodeExtractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "223">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "28">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -71,17 +71,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "70F2059C-BCD3-4FE8-AAEF-C83ED1BC5E2E"
+            uuid = "4A0292EB-AFA1-4694-9384-D9C42B65A59E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UmlEditor/Views/NodeView.swift"
+            filePath = "UmlEditor/Utilities/NodeExtractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "extract()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

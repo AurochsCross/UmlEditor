@@ -8,7 +8,7 @@ import Foundation
 struct UMLElement: Codable {
     let id: Int
     let typeString: TypeString
-    let properties, methods: [Method]?
+    var properties, methods: [Method]?
     var name: String?
     let superClass: Int?
     let cases: [Case]?
@@ -25,7 +25,10 @@ struct Case: Codable {
 
 // MARK: - Method
 struct Method: Codable {
-    let name: String
+    var name: String
+    var nameWithoutIdentifier: String {
+        String(name.dropFirst(4))
+    }
     let type: TypeEnum
     let accessLevel: AccessLevel
 }
