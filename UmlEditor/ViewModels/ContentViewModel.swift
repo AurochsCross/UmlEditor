@@ -57,7 +57,7 @@ class ContentViewModel: ObservableObject {
                 }
                 
                 return self.nodeGroups.filter { group in
-                    group.name.contains(text)
+                    group.name.lowercased().contains(text.lowercased())
                 }
             }
             .receive(on: DispatchQueue.main)
