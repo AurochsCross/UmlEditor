@@ -87,7 +87,7 @@
 }
   ],
   "name": "ErrorType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 30,
   "typeString": "class",
@@ -106,7 +106,7 @@
 }
   ],
   "name": "DirectionsTools",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 31,
   "typeString": "class",
@@ -230,7 +230,7 @@
 }
   ],
   "name": "ColorTemperatureTools",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 32,
   "typeString": "class",
@@ -277,7 +277,7 @@
 }
   ],
   "name": "ImageManagerTools",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 33,
   "typeString": "class",
@@ -426,7 +426,7 @@
 }
   ],
   "name": "UnitConversionTools",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 34,
   "typeString": "class",
@@ -513,7 +513,7 @@
 }
   ],
   "name": "TimeTools",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 35,
   "typeString": "class",
@@ -557,7 +557,7 @@
 }
   ],
   "name": "ComposeTools",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 36,
   "typeString": "class",
@@ -596,7 +596,7 @@
 }
   ],
   "name": "CoordinateTools",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 37,
   "typeString": "enum",
@@ -612,7 +612,7 @@
 }
   ],
   "name": "ReachabilityError",
-  "superClass": 269
+  "superClass": 257
 },{
   "id": 38,
   "typeString": "enum",
@@ -635,7 +635,7 @@
 }
   ],
   "name": "NetworkStatus",
-  "superClass": 270
+  "superClass": 258
 },{
   "id": 39,
   "typeString": "enum",
@@ -658,7 +658,7 @@
 }
   ],
   "name": "Connection",
-  "superClass": 270
+  "superClass": 258
 },{
   "id": 40,
   "typeString": "class",
@@ -786,7 +786,7 @@
 }
   ],
   "name": "LocalizationTools",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 49,
   "typeString": "class",
@@ -803,7 +803,7 @@
 }
   ],
   "name": "XibLoader",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 50,
   "typeString": "class",
@@ -847,7 +847,7 @@
 }
   ],
   "name": "ForecastDataModel",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 51,
   "typeString": "struct",
@@ -1129,7 +1129,7 @@
 }
   ],
   "name": "FacebookSignInManagerDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 58,
   "typeString": "class",
@@ -1199,7 +1199,7 @@
 }
   ],
   "name": "GoogleSignInManagerDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 60,
   "typeString": "class",
@@ -1258,7 +1258,7 @@
 }
   ],
   "name": "GoogleSignInManager",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 61,
   "typeString": "protocol",
@@ -1280,7 +1280,7 @@
 }
   ],
   "name": "AgendaRepositoryDelegate",
-  "superClass": 271,
+  "superClass": 259,
   "extensions": [
     63
   ]
@@ -1383,7 +1383,7 @@
 }
   ],
   "name": "NoteRepositoryDelegate",
-  "superClass": 271,
+  "superClass": 259,
   "extensions": [
     66
   ]
@@ -1480,6 +1480,13 @@
   "accessLevel": "internal"
 }
   ],
+  "methods": [
+    {
+  "name": "init?(with dataDict: [String: Any], id: String?, ownerId: String?)",
+  "type": "instance",
+  "accessLevel": "internal"
+}
+  ],
   "name": "Firestorable"
 },{
   "id": 68,
@@ -1555,7 +1562,7 @@
 }
   ],
   "name": "EventRepositoryDelegate",
-  "superClass": 271,
+  "superClass": 259,
   "extensions": [
     71
   ]
@@ -1653,7 +1660,7 @@
 }
   ],
   "name": "SettingsRepositoryDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 73,
   "typeString": "class",
@@ -2621,7 +2628,7 @@
 }
   ],
   "name": "UnitType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 100,
   "typeString": "class",
@@ -2710,12 +2717,12 @@
 }
   ],
   "protocols": [
-    273,
-    274,
+    261,
+    262,
     116
   ],
   "name": "GeneralPreferencesViewController",
-  "superClass": 272,
+  "superClass": 260,
   "containedEntities": [
     99
   ]
@@ -2862,7 +2869,7 @@
 }
   ],
   "name": "HomeLocationViewController",
-  "superClass": 272
+  "superClass": 260
 },{
   "id": 102,
   "typeString": "class",
@@ -2896,7 +2903,7 @@
 }
   ],
   "name": "SettingsCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 103,
   "typeString": "enum",
@@ -2909,7 +2916,7 @@
 }
   ],
   "name": "AccountOptionSection",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 104,
   "typeString": "class",
@@ -2993,7 +3000,7 @@
 }
   ],
   "name": "AccountOptionsViewController",
-  "superClass": 276
+  "superClass": 264
 },{
   "id": 105,
   "typeString": "enum",
@@ -3006,7 +3013,7 @@
 }
   ],
   "name": "SettingsItemType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 106,
   "typeString": "class",
@@ -3080,7 +3087,7 @@
 }
   ],
   "name": "SettingsViewController",
-  "superClass": 272,
+  "superClass": 260,
   "containedEntities": [
     105
   ]
@@ -3095,7 +3102,7 @@
 }
   ],
   "name": "CustomAlertViewControllerDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 108,
   "typeString": "class",
@@ -3207,7 +3214,7 @@
     110
   ],
   "name": "CustomAlertViewController",
-  "superClass": 277
+  "superClass": 265
 },{
   "id": 109,
   "typeString": "class",
@@ -3226,7 +3233,7 @@
 }
   ],
   "name": "CustomAlertTitleLabelView",
-  "superClass": 278
+  "superClass": 266
 },{
   "id": 110,
   "typeString": "protocol",
@@ -3238,7 +3245,7 @@
 }
   ],
   "name": "CustomAlertButtonViewDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 111,
   "typeString": "class",
@@ -3272,7 +3279,7 @@
 }
   ],
   "name": "CustomAlertButtonView",
-  "superClass": 278
+  "superClass": 266
 },{
   "id": 112,
   "typeString": "protocol",
@@ -3289,7 +3296,7 @@
 }
   ],
   "name": "DatePickerViewControllerDelegate",
-  "superClass": 271,
+  "superClass": 259,
   "extensions": [
     114
   ]
@@ -3465,7 +3472,7 @@
 }
   ],
   "name": "BasePickerViewController",
-  "superClass": 277
+  "superClass": 265
 },{
   "id": 116,
   "typeString": "protocol",
@@ -3477,7 +3484,7 @@
 }
   ],
   "name": "StringPickerViewControllerDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 117,
   "typeString": "class",
@@ -3568,7 +3575,7 @@
 }
   ],
   "name": "ImageGalleryViewControllerDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 119,
   "typeString": "class",
@@ -3682,7 +3689,7 @@
 }
   ],
   "name": "ImageGalleryViewController",
-  "superClass": 272
+  "superClass": 260
 },{
   "id": 120,
   "typeString": "class",
@@ -3766,7 +3773,7 @@
 }
   ],
   "name": "PhotoAlbumSelectionViewController",
-  "superClass": 276
+  "superClass": 264
 },{
   "id": 121,
   "typeString": "class",
@@ -3800,7 +3807,7 @@
 }
   ],
   "name": "PhotoAlbumCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 122,
   "typeString": "class",
@@ -3849,7 +3856,7 @@
 }
   ],
   "name": "PhotoCell",
-  "superClass": 279
+  "superClass": 267
 },{
   "id": 123,
   "typeString": "class",
@@ -3993,7 +4000,7 @@
 }
   ],
   "name": "PhotoSelectionViewController",
-  "superClass": 272
+  "superClass": 260
 },{
   "id": 124,
   "typeString": "protocol",
@@ -4010,7 +4017,7 @@
 }
   ],
   "name": "LocationSearchViewControllerDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 125,
   "typeString": "class",
@@ -4109,7 +4116,7 @@
 }
   ],
   "name": "LocationSearchViewController",
-  "superClass": 277
+  "superClass": 265
 },{
   "id": 126,
   "typeString": "class",
@@ -4143,7 +4150,7 @@
 }
   ],
   "name": "LocationPredictionCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 127,
   "typeString": "protocol",
@@ -4165,7 +4172,7 @@
 }
   ],
   "name": "LocationSearchDataModelDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 128,
   "typeString": "class",
@@ -4477,7 +4484,7 @@
 }
   ],
   "name": "SunCalculatorViewController",
-  "superClass": 272
+  "superClass": 260
 },{
   "id": 130,
   "typeString": "class",
@@ -4626,7 +4633,7 @@
 }
   ],
   "name": "MenuCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 133,
   "typeString": "enum",
@@ -4651,7 +4658,7 @@
 }
   ],
   "name": "MenuItem",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 134,
   "typeString": "class",
@@ -4700,7 +4707,7 @@
 }
   ],
   "name": "MenuViewController",
-  "superClass": 277
+  "superClass": 265
 },{
   "id": 135,
   "typeString": "class",
@@ -4812,7 +4819,7 @@
     174
   ],
   "name": "EventTabBarViewController",
-  "superClass": 280
+  "superClass": 268
 },{
   "id": 136,
   "typeString": "enum",
@@ -4825,7 +4832,7 @@
 }
   ],
   "name": "Section",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 137,
   "typeString": "class",
@@ -4987,7 +4994,7 @@
     138
   ],
   "name": "NoteDetailsViewController",
-  "superClass": 281,
+  "superClass": 269,
   "containedEntities": [
     136
   ]
@@ -5002,7 +5009,7 @@
 }
   ],
   "name": "NoteDetailsDataModelDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 139,
   "typeString": "class",
@@ -5076,7 +5083,7 @@
 }
   ],
   "name": "NoteDetailsDataModel",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 140,
   "typeString": "enum",
@@ -5089,7 +5096,7 @@
 }
   ],
   "name": "FieldType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 141,
   "typeString": "class",
@@ -5373,11 +5380,11 @@
 }
   ],
   "protocols": [
-    283,
-    274
+    271,
+    262
   ],
   "name": "CreateOrEditNoteViewController",
-  "superClass": 282,
+  "superClass": 270,
   "containedEntities": [
     140
   ]
@@ -5392,7 +5399,7 @@
 }
   ],
   "name": "CreateOrEditNoteDataModelDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 143,
   "typeString": "class",
@@ -5489,7 +5496,7 @@
   "accessLevel": "private"
 },
     {
-  "name": "var dataModel: NoteListDataModel! @objc required @objc @objc",
+  "name": "var dataModel: NoteListDataModel! required @objc @objc",
   "type": "instance",
   "accessLevel": "private"
 }
@@ -5546,7 +5553,7 @@
   "accessLevel": "internal"
 },
     {
-  "name": "init(withEventId eventId: String)",
+  "name": "init(with event: EventEntity)",
   "type": "instance",
   "accessLevel": "internal"
 },
@@ -5557,7 +5564,7 @@
 }
   ],
   "name": "NoteListViewController",
-  "superClass": 276
+  "superClass": 264
 },{
   "id": 145,
   "typeString": "class",
@@ -5601,7 +5608,7 @@
 }
   ],
   "name": "NoteListCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 146,
   "typeString": "protocol",
@@ -5613,13 +5620,13 @@
 }
   ],
   "name": "NoteListDataModelDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 147,
   "typeString": "class",
   "properties": [
     {
-  "name": "let eventId: String",
+  "name": "let event: EventEntity",
   "type": "instance",
   "accessLevel": "internal"
 },
@@ -5666,18 +5673,18 @@
   "accessLevel": "internal"
 },
     {
-  "name": "init(withEventId eventId: String)",
+  "name": "init(with event: EventEntity)",
   "type": "instance",
   "accessLevel": "private"
 },
     {
-  "name": "init(withEventId eventId: String, delegate: NoteListDataModelDelegate)",
+  "name": "init(with event: EventEntity, delegate: NoteListDataModelDelegate)",
   "type": "instance",
   "accessLevel": "internal"
 }
   ],
   "name": "NoteListDataModel",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 148,
   "typeString": "class",
@@ -5721,7 +5728,7 @@
 }
   ],
   "name": "EventDetailsViewController",
-  "superClass": 284
+  "superClass": 272
 },{
   "id": 149,
   "typeString": "class",
@@ -5850,7 +5857,7 @@
 }
   ],
   "name": "AgendaViewController",
-  "superClass": 277,
+  "superClass": 265,
   "extensions": [
     152,
     153
@@ -5866,7 +5873,7 @@
 }
   ],
   "name": "AgendaDataModelDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 151,
   "typeString": "class",
@@ -5917,7 +5924,7 @@
 }
   ],
   "name": "FieldType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 155,
   "typeString": "class",
@@ -6171,7 +6178,7 @@
 }
   ],
   "name": "CreateOrEditAgendaViewController",
-  "superClass": 282,
+  "superClass": 270,
   "containedEntities": [
     154
   ]
@@ -6186,7 +6193,7 @@
 }
   ],
   "name": "CreateOrEditAgendaDataModelDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 157,
   "typeString": "class",
@@ -6304,7 +6311,7 @@
 }
   ],
   "name": "MapViewControllerDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 159,
   "typeString": "class",
@@ -6363,7 +6370,7 @@
 }
   ],
   "name": "MapViewController",
-  "superClass": 272
+  "superClass": 260
 },{
   "id": 160,
   "typeString": "class",
@@ -6522,7 +6529,7 @@
 }
   ],
   "name": "AgendaDefaultCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 161,
   "typeString": "class",
@@ -6546,7 +6553,7 @@
 }
   ],
   "name": "TimeZoneSeparatorCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 162,
   "typeString": "protocol",
@@ -6558,7 +6565,7 @@
 }
   ],
   "name": "AgendaStartingLocationCellDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 163,
   "typeString": "class",
@@ -6607,7 +6614,7 @@
 }
   ],
   "name": "AgendaStartingLocationCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 164,
   "typeString": "class",
@@ -6761,7 +6768,7 @@
 }
   ],
   "name": "AgendaListViewController",
-  "superClass": 276
+  "superClass": 264
 },{
   "id": 165,
   "typeString": "protocol",
@@ -6773,7 +6780,7 @@
 }
   ],
   "name": "AgendaListDataModelDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 166,
   "typeString": "class",
@@ -6953,7 +6960,7 @@
 }
   ],
   "name": "DateSectionHeaderView",
-  "superClass": 285
+  "superClass": 273
 },{
   "id": 168,
   "typeString": "enum",
@@ -6966,7 +6973,7 @@
 }
   ],
   "name": "FieldType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 169,
   "typeString": "class",
@@ -7105,7 +7112,7 @@
 }
   ],
   "name": "CreateOrEditEventViewController",
-  "superClass": 282,
+  "superClass": 270,
   "containedEntities": [
     168
   ]
@@ -7127,7 +7134,7 @@
 }
   ],
   "name": "EventHeaderCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 171,
   "typeString": "class",
@@ -7295,7 +7302,7 @@
 }
   ],
   "name": "EventCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 174,
   "typeString": "protocol",
@@ -7307,7 +7314,7 @@
 }
   ],
   "name": "EventListDataModelDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 175,
   "typeString": "class",
@@ -7422,7 +7429,7 @@
 }
   ],
   "name": "RateAppCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 177,
   "typeString": "class",
@@ -7546,7 +7553,7 @@
 }
   ],
   "name": "EventListViewController",
-  "superClass": 276
+  "superClass": 264
 },{
   "id": 178,
   "typeString": "class",
@@ -7558,7 +7565,7 @@
 }
   ],
   "name": "EventsTabCell",
-  "superClass": 279
+  "superClass": 267
 },{
   "id": 179,
   "typeString": "class",
@@ -7652,7 +7659,7 @@
 }
   ],
   "name": "AccountActionsViewController",
-  "superClass": 272
+  "superClass": 260
 },{
   "id": 180,
   "typeString": "class",
@@ -7811,7 +7818,7 @@
 }
   ],
   "name": "SignInOptionsViewController",
-  "superClass": 272
+  "superClass": 260
 },{
   "id": 181,
   "typeString": "enum",
@@ -7824,7 +7831,7 @@
 }
   ],
   "name": "SignUpSection",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 182,
   "typeString": "class",
@@ -7960,7 +7967,7 @@
 }
   ],
   "name": "SignUpWithEmailDataModelDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 186,
   "typeString": "class",
@@ -8021,7 +8028,7 @@
 }
   ],
   "name": "SignInSection",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 188,
   "typeString": "class",
@@ -8137,7 +8144,7 @@
 }
   ],
   "name": "SignInWithEmailDataModelDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 190,
   "typeString": "class",
@@ -8329,7 +8336,7 @@
 }
   ],
   "name": "BaseSignInWithEmailViewController",
-  "superClass": 281
+  "superClass": 269
 },{
   "id": 192,
   "typeString": "enum",
@@ -8342,7 +8349,7 @@
 }
   ],
   "name": "ResetPasswordSection",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 193,
   "typeString": "class",
@@ -8448,7 +8455,7 @@
 }
   ],
   "name": "ResetPasswordDataModelDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 195,
   "typeString": "class",
@@ -8491,7 +8498,7 @@
 }
   ],
   "name": "OnboardingPanelType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 197,
   "typeString": "class",
@@ -8585,7 +8592,7 @@
 }
   ],
   "name": "OnboardingViewController",
-  "superClass": 272,
+  "superClass": 260,
   "containedEntities": [
     196
   ]
@@ -8727,10 +8734,10 @@
 }
   ],
   "protocols": [
-    287
+    275
   ],
   "name": "AppDelegate",
-  "superClass": 286,
+  "superClass": 274,
   "extensions": [
     198,
     203
@@ -8802,7 +8809,7 @@
 }
   ],
   "name": "CheckboxCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 205,
   "typeString": "class",
@@ -8871,7 +8878,7 @@
 }
   ],
   "name": "ImagesCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 206,
   "typeString": "enum",
@@ -8884,7 +8891,7 @@
 }
   ],
   "name": "DoubleInputSingleLineInputType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 207,
   "typeString": "protocol",
@@ -8901,7 +8908,7 @@
 }
   ],
   "name": "DoubleInputSingleLineCellDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 208,
   "typeString": "class",
@@ -9030,7 +9037,7 @@
 }
   ],
   "name": "DoubleInputSingleLineCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 209,
   "typeString": "protocol",
@@ -9042,7 +9049,7 @@
 }
   ],
   "name": "InputMultilineLineCellDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 210,
   "typeString": "class",
@@ -9131,7 +9138,7 @@
 }
   ],
   "name": "InputMultiLineCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 211,
   "typeString": "class",
@@ -9175,7 +9182,7 @@
 }
   ],
   "name": "SingleChoiceCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 212,
   "typeString": "protocol",
@@ -9187,7 +9194,7 @@
 }
   ],
   "name": "SwitchCellDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 213,
   "typeString": "class",
@@ -9241,7 +9248,7 @@
 }
   ],
   "name": "SwitchCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 214,
   "typeString": "enum",
@@ -9254,7 +9261,7 @@
 }
   ],
   "name": "SingleLineCellInputType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 215,
   "typeString": "protocol",
@@ -9271,7 +9278,7 @@
 }
   ],
   "name": "InputSingleLineCellDelegate",
-  "superClass": 271,
+  "superClass": 259,
   "extensions": [
     217
   ]
@@ -9403,7 +9410,7 @@
 }
   ],
   "name": "InputSingleLineCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 218,
   "typeString": "protocol",
@@ -9420,7 +9427,7 @@
 }
   ],
   "name": "AddressCellDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 219,
   "typeString": "class",
@@ -9464,7 +9471,7 @@
 }
   ],
   "name": "AddressCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 220,
   "typeString": "class",
@@ -9498,7 +9505,7 @@
 }
   ],
   "name": "SearchTableViewCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 221,
   "typeString": "class",
@@ -9557,7 +9564,7 @@
 }
   ],
   "name": "CheckMarkCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 222,
   "typeString": "class",
@@ -9581,7 +9588,7 @@
 }
   ],
   "name": "MultilineTextCell",
-  "superClass": 275
+  "superClass": 263
 },{
   "id": 223,
   "typeString": "protocol",
@@ -9598,7 +9605,7 @@
 }
   ],
   "name": "DoubleChoiceCellDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 224,
   "typeString": "enum",
@@ -9676,7 +9683,7 @@
 }
   ],
   "name": "DoubleChoiceCell",
-  "superClass": 275,
+  "superClass": 263,
   "containedEntities": [
     224
   ]
@@ -9829,7 +9836,7 @@
 }
   ],
   "name": "SunCalculatorMapViewDelegate",
-  "superClass": 271
+  "superClass": 259
 },{
   "id": 230,
   "typeString": "class",
@@ -10053,7 +10060,7 @@
 }
   ],
   "name": "SunCalculatorMapView",
-  "superClass": 278,
+  "superClass": 266,
   "extensions": [
     226,
     227
@@ -10110,7 +10117,7 @@
 }
   ],
   "name": "NoDataView",
-  "superClass": 278
+  "superClass": 266
 },{
   "id": 233,
   "typeString": "class",
@@ -10139,7 +10146,7 @@
 }
   ],
   "name": "NoDataConfiguration",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 234,
   "typeString": "protocol",
@@ -10166,7 +10173,7 @@
 }
   ],
   "name": "MapContainerViewDelegate",
-  "superClass": 271,
+  "superClass": 259,
   "extensions": [
     237
   ]
@@ -10348,7 +10355,7 @@
 }
   ],
   "name": "MapContainerView",
-  "superClass": 278,
+  "superClass": 266,
   "extensions": [
     29
   ]
@@ -10475,7 +10482,7 @@
 }
   ],
   "name": "ForecastEntity",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 240,
   "typeString": "class",
@@ -10539,7 +10546,7 @@
 }
   ],
   "name": "NoteEntity",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 242,
   "typeString": "class",
@@ -10635,7 +10642,7 @@
 }
   ],
   "name": "DistanceUnitType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 244,
   "typeString": "enum",
@@ -10655,7 +10662,7 @@
 }
   ],
   "name": "TemperatureUnitType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 245,
   "typeString": "class",
@@ -10704,7 +10711,7 @@
 }
   ],
   "name": "UnitsEntity",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 246,
   "typeString": "enum",
@@ -10724,7 +10731,7 @@
 }
   ],
   "name": "AgendaType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 247,
   "typeString": "class",
@@ -10913,7 +10920,7 @@
 }
   ],
   "name": "AgendaEntity",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 249,
   "typeString": "class",
@@ -11007,7 +11014,7 @@
 }
   ],
   "name": "EventType",
-  "superClass": 267
+  "superClass": 255
 },{
   "id": 252,
   "typeString": "class",
@@ -11141,7 +11148,7 @@
 }
   ],
   "name": "EventEntity",
-  "superClass": 268
+  "superClass": 256
 },{
   "id": 254,
   "typeString": "class",
@@ -11173,427 +11180,48 @@
 },{
   "id": 255,
   "typeString": "class",
-  "methods": [
-    {
-  "name": "getMoonCoords(_ d:Double) -> TSMGeocentricCoordinates",
-  "type": "type",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMMoonTools"
+  "name": "Int"
 },{
   "id": 256,
   "typeString": "class",
-  "methods": [
-    {
-  "name": "getSolarMeanAnomaly(_ d:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "getEquationOfCenter(_ M:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "getEclipticLongitudeM(_ M:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "getSunCoords(_ d:Double) -> TSMEquatorialCoordinates",
-  "type": "type",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMSunTools"
+  "name": "NSObject"
 },{
   "id": 257,
-  "typeString": "class",
-  "methods": [
-    {
-  "name": "toJulian(_ date:Date) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "fromJulian(_ j:Double) -> Date",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "toDays(_ date:Date) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMDateTools"
-},{
-  "id": 258,
-  "typeString": "class",
-  "methods": [
-    {
-  "name": "getRightAscensionL(_ l:Double, b:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "getDeclinationL(_ l:Double, b:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "getAzimuthH(_ H:Double, phi:Double, dec:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "getAltitudeH(_ H:Double, phi:Double, dec:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "getSiderealTimeD(_ d:Double, lw:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMPositionTools"
-},{
-  "id": 259,
-  "typeString": "class",
-  "methods": [
-    {
-  "name": "getJulianCycleD(_ d:Double, lw:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "getApproxTransitHt(_ Ht:Double, lw:Double, n:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "getSolarTransitJDs(_ ds:Double, M:Double, L:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "getHourAngleH(_ h:Double, phi:Double, d:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMTimeTools"
-},{
-  "id": 260,
-  "typeString": "class",
-  "methods": [
-    {
-  "name": "RAD() -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "E() -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "PI() -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMConstants"
-},{
-  "id": 261,
-  "typeString": "class",
-  "properties": [
-    {
-  "name": "let J0:Double",
-  "type": "instance",
-  "accessLevel": "internal"
-},
-    {
-  "name": "var sunrise:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var sunriseEnd:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var goldenHourEnd:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var solarNoon:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var goldenHour:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var sunsetStart:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var sunset:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var dusk:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var nauticalDusk:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var night:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var nadir:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var nightEnd:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var nauticalDawn:Date",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var dawn:Date",
-  "type": "instance",
-  "accessLevel": "public"
-}
-  ],
-  "methods": [
-    {
-  "name": "getSetJ(_ h:Double, phi:Double, dec:Double, lw:Double, n:Double, M:Double, L:Double) -> Double",
-  "type": "type",
-  "accessLevel": "internal"
-},
-    {
-  "name": "getTimes(_ date:Date, latitude:Double, longitude:Double) -> TSMSunCalculator",
-  "type": "type",
-  "accessLevel": "public"
-},
-    {
-  "name": "getSunPosition(_ timeAndDate:Date, latitude:Double, longitude:Double) -> TSMSunPosition",
-  "type": "type",
-  "accessLevel": "public"
-},
-    {
-  "name": "getMoonPosition(_ timeAndDate:Date, latitude:Double, longitude:Double) -> TSMMoonPosition",
-  "type": "type",
-  "accessLevel": "public"
-},
-    {
-  "name": "getMoonIllumination(_ timeAndDate:Date) -> TSMMoonIllumination",
-  "type": "type",
-  "accessLevel": "public"
-},
-    {
-  "name": "init(date:Date, latitude:Double, longitude:Double)",
-  "type": "instance",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMSunCalculator",
-  "superClass": 268
-},{
-  "id": 262,
-  "typeString": "class",
-  "properties": [
-    {
-  "name": "var azimuth:Double",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var altitude:Double",
-  "type": "instance",
-  "accessLevel": "public"
-}
-  ],
-  "methods": [
-    {
-  "name": "init(azimuth:Double, altitude:Double)",
-  "type": "instance",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMSunPosition",
-  "superClass": 268
-},{
-  "id": 263,
-  "typeString": "class",
-  "properties": [
-    {
-  "name": "var rightAscension:Double;",
-  "type": "instance",
-  "accessLevel": "internal"
-},
-    {
-  "name": "var declination:Double;",
-  "type": "instance",
-  "accessLevel": "internal"
-},
-    {
-  "name": "var distance:Double;",
-  "type": "instance",
-  "accessLevel": "internal"
-}
-  ],
-  "methods": [
-    {
-  "name": "init(rightAscension:Double, declination:Double, distance:Double)",
-  "type": "instance",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMGeocentricCoordinates"
-},{
-  "id": 264,
-  "typeString": "class",
-  "properties": [
-    {
-  "name": "var azimuth:Double",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var altitude:Double",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var distance:Double",
-  "type": "instance",
-  "accessLevel": "public"
-}
-  ],
-  "methods": [
-    {
-  "name": "init(azimuth:Double, altitude:Double, distance:Double)",
-  "type": "instance",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMMoonPosition",
-  "superClass": 268
-},{
-  "id": 265,
-  "typeString": "class",
-  "properties": [
-    {
-  "name": "var fraction:Double",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var phase:Double",
-  "type": "instance",
-  "accessLevel": "public"
-},
-    {
-  "name": "var angle:Double",
-  "type": "instance",
-  "accessLevel": "public"
-}
-  ],
-  "methods": [
-    {
-  "name": "init(fraction:Double, phase:Double, angle:Double)",
-  "type": "instance",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMMoonIllumination",
-  "superClass": 268
-},{
-  "id": 266,
-  "typeString": "class",
-  "properties": [
-    {
-  "name": "var rightAscension:Double",
-  "type": "instance",
-  "accessLevel": "internal"
-},
-    {
-  "name": "var declination:Double",
-  "type": "instance",
-  "accessLevel": "internal"
-}
-  ],
-  "methods": [
-    {
-  "name": "init(rightAscension:Double, declination:Double)",
-  "type": "instance",
-  "accessLevel": "internal"
-}
-  ],
-  "name": "TSMEquatorialCoordinates"
-},{
-  "id": 267,
-  "typeString": "class",
-  "name": "Int"
-},{
-  "id": 269,
   "typeString": "class",
   "name": "Error",
   "extensions": [
     28
   ]
 },{
-  "id": 270,
+  "id": 258,
   "typeString": "class",
   "name": "CustomStringConvertible"
 },{
-  "id": 271,
+  "id": 259,
   "typeString": "class",
   "name": "class"
 },{
-  "id": 272,
+  "id": 260,
   "typeString": "class",
   "name": "BaseViewController"
 },{
-  "id": 273,
+  "id": 261,
   "typeString": "protocol",
   "name": "UITableViewDelegate"
 },{
-  "id": 274,
+  "id": 262,
   "typeString": "protocol",
   "name": "UITableViewDataSource"
 },{
-  "id": 275,
+  "id": 263,
   "typeString": "class",
   "name": "UITableViewCell"
 },{
-  "id": 276,
+  "id": 264,
   "typeString": "class",
   "name": "BaseListViewController"
 },{
-  "id": 277,
+  "id": 265,
   "typeString": "class",
   "name": "UIViewController",
   "extensions": [
@@ -11601,7 +11229,7 @@
     20
   ]
 },{
-  "id": 278,
+  "id": 266,
   "typeString": "class",
   "name": "UIView",
   "extensions": [
@@ -11609,64 +11237,64 @@
     8
   ]
 },{
-  "id": 279,
+  "id": 267,
   "typeString": "class",
   "name": "UICollectionViewCell"
 },{
-  "id": 280,
+  "id": 268,
   "typeString": "class",
   "name": "BaseButtonBarPagerTabStripViewController<EventsTabCell>"
 },{
-  "id": 281,
+  "id": 269,
   "typeString": "class",
   "name": "BaseDetailsViewController"
 },{
-  "id": 282,
+  "id": 270,
   "typeString": "class",
   "name": "BaseEditViewController"
 },{
-  "id": 283,
+  "id": 271,
   "typeString": "protocol",
   "name": "UINavigationControllerDelegate"
 },{
-  "id": 284,
+  "id": 272,
   "typeString": "class",
   "name": "UITabBarController"
 },{
-  "id": 285,
+  "id": 273,
   "typeString": "class",
   "name": "UITableViewHeaderFooterView"
 },{
-  "id": 286,
+  "id": 274,
   "typeString": "class",
   "name": "UIResponder"
 },{
-  "id": 287,
+  "id": 275,
   "typeString": "protocol",
   "name": "UIApplicationDelegate"
 },{
-  "id": 288,
+  "id": 276,
   "typeString": "class",
   "name": "UIImage",
   "extensions": [
     1
   ]
 },{
-  "id": 289,
+  "id": 277,
   "typeString": "class",
   "name": "UIButton",
   "extensions": [
     2
   ]
 },{
-  "id": 290,
+  "id": 278,
   "typeString": "class",
   "name": "UIColor",
   "extensions": [
     4
   ]
 },{
-  "id": 291,
+  "id": 279,
   "typeString": "class",
   "name": "Array",
   "extensions": [
@@ -11679,7 +11307,7 @@
     253
   ]
 },{
-  "id": 292,
+  "id": 280,
   "typeString": "class",
   "name": "NSArray",
   "extensions": [
@@ -11687,81 +11315,81 @@
     14
   ]
 },{
-  "id": 293,
+  "id": 281,
   "typeString": "class",
   "name": "NSMutableArray",
   "extensions": [
     12
   ]
 },{
-  "id": 294,
+  "id": 282,
   "typeString": "class",
   "name": "UIFont",
   "extensions": [
     15
   ]
 },{
-  "id": 295,
+  "id": 283,
   "typeString": "class",
   "name": "Date",
   "extensions": [
     16
   ]
 },{
-  "id": 296,
+  "id": 284,
   "typeString": "class",
   "name": "UINavigationItem",
   "extensions": [
     17
   ]
 },{
-  "id": 297,
+  "id": 285,
   "typeString": "class",
   "name": "UICollectionView",
   "extensions": [
     18
   ]
 },{
-  "id": 298,
+  "id": 286,
   "typeString": "class",
   "name": "UINavigationController",
   "extensions": [
     21
   ]
 },{
-  "id": 299,
+  "id": 287,
   "typeString": "class",
   "name": "UITableView",
   "extensions": [
     22
   ]
 },{
-  "id": 300,
+  "id": 288,
   "typeString": "class",
   "name": "CLLocationCoordinate2D",
   "extensions": [
     23
   ]
 },{
-  "id": 301,
+  "id": 289,
   "typeString": "protocol",
   "name": "Equatable"
 },{
-  "id": 302,
+  "id": 290,
   "typeString": "class",
   "name": "String",
   "extensions": [
     24
   ]
 },{
-  "id": 303,
+  "id": 291,
   "typeString": "class",
   "name": "Optional",
   "extensions": [
     26
   ]
 },{
-  "id": 304,
+  "id": 292,
   "typeString": "class",
   "name": "Notification",
   "extensions": [
@@ -11770,14 +11398,14 @@
     202
   ]
 },{
-  "id": 305,
+  "id": 293,
   "typeString": "class",
   "name": "NotificationCenter",
   "extensions": [
     46
   ]
 },{
-  "id": 306,
+  "id": 294,
   "typeString": "protocol",
   "name": "CLLocationManagerDelegate"
 },{
@@ -12431,7 +12059,7 @@
 }
   ],
   "protocols": [
-    301
+    289
   ]
 },{
   "id": 24,
@@ -12907,7 +12535,7 @@
 }
   ],
   "protocols": [
-    306
+    294
   ]
 },{
   "id": 237,
